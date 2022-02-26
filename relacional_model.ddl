@@ -1,5 +1,5 @@
 -- Gerado por Oracle SQL Developer Data Modeler 21.4.1.349.1605
---   em:        2022-02-26 18:49:23 BRT
+--   em:        2022-02-26 18:55:48 BRT
 --   site:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
@@ -14,9 +14,7 @@ CREATE TABLE avaliacoes (
     ava_pontos    INTEGER,
     ava_descricao VARCHAR2(255),
     ava_cri_id    INTEGER NOT NULL,
-    ava_vin_id    unknown 
---  ERROR: Datatype UNKNOWN is not allowed 
-     NOT NULL
+    ava_vin_id    INTEGER NOT NULL
 );
 
 ALTER TABLE avaliacoes ADD CONSTRAINT pk_ava PRIMARY KEY ( ava_id );
@@ -82,9 +80,7 @@ CREATE TABLE variedades (
 ALTER TABLE variedades ADD CONSTRAINT pk_var PRIMARY KEY ( var_id );
 
 CREATE TABLE vinhos (
-    vin_id     unknown 
---  ERROR: Datatype UNKNOWN is not allowed 
-     NOT NULL,
+    vin_id     INTEGER NOT NULL,
     vin_title  VARCHAR2(255),
     vin_price  NUMBER,
     vin_fab_id INTEGER NOT NULL,
@@ -173,5 +169,5 @@ ALTER TABLE vinhos
 -- ORDS ENABLE SCHEMA                       0
 -- ORDS ENABLE OBJECT                       0
 -- 
--- ERRORS                                   2
+-- ERRORS                                   0
 -- WARNINGS                                 0
