@@ -155,7 +155,7 @@ ALTER TABLE variedades ADD CONSTRAINT pk_var PRIMARY KEY ( var_id );
 CREATE TABLE vinhos (
     vin_id     INTEGER NOT NULL,
     vin_title  VARCHAR2(255),
-    vin_price  NUMBER,
+    vin_price  NUMBER(8, 2),
     vin_fab_id INTEGER NOT NULL,
     vin_var_id INTEGER NOT NULL,
     vin_des_id INTEGER NOT NULL,
